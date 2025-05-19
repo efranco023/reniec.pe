@@ -2,22 +2,47 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Hackeado</title>
+  <title>Has sido hackeado</title>
   <style>
     body {
       background-color: black;
       color: red;
       font-family: 'Courier New', Courier, monospace;
       text-align: center;
-      padding-top: 20%;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      animation: flash 0.5s infinite alternate;
     }
 
     h1 {
       font-size: 60px;
+      animation: shake 0.5s infinite;
+    }
+
+    @keyframes flash {
+      from { background-color: black; color: red; }
+      to { background-color: red; color: black; }
+    }
+
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      50% { transform: translateX(10px); }
+      75% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
     }
   </style>
 </head>
 <body>
   <h1>Has sido hackeado por el Guanabichi 🕶️💻</h1>
+
+  <audio autoplay>
+    <source src="https://www.soundjay.com/misc/sounds/fail-buzzer-01.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
 </body>
 </html>
